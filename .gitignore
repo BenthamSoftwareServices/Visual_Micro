@@ -34,3 +34,14 @@
 # Misc
 *.vs
 .vs
+.vs/
+examples/
+docs/
+Extensions/
+Fonts/
+Processors/
+TFT_Drivers/
+Tools/
+User_Setups/
+
+
