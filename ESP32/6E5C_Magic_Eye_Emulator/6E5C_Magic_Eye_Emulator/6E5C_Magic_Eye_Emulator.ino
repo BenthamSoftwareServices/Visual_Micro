@@ -37,9 +37,10 @@ void setup(void)
 	Serial.println("6E5C Emulator Starting"); // send text to USART
 
 	// Init Display
-	if (!gfx->begin())
+	if (!gfx->begin()) // If initialization fails, handle the error
 	{
 		Serial.println("gfx->begin() failed!");
+		while (1);  // Halt the program (infinite loop)
 	}
 	r = gfx->width();
 	r0 = r / 2;
