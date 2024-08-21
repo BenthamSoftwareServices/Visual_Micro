@@ -262,7 +262,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties config.Release.customdebug_esp32_esp32_debugger_type="universal" />
+      <UserProperties config.Release.customdebug_esp32_esp32_debugger_type="none" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
