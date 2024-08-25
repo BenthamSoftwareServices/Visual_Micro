@@ -34,6 +34,8 @@
 #define DIAL_CENTRE_X 120
 #define DIAL_CENTRE_Y 120
 
+#define TFT_BL   14  // LED back-light
+
 // Font attached to this sketch
 #include "NotoSansBold36.h"
 #define AA_FONT_LARGE NotoSansBold36
@@ -79,6 +81,12 @@ void setup() {
 
 	// The jpeg decoder must be given the exact name of the rendering function above
 	TJpgDec.setCallback(tft_output);
+
+#ifdef TFT_BL
+	pinMode(TFT_BL, OUTPUT); //Setting GFX_BL as an output causes the GFX to go low as this is the reset condition
+	delay(10);
+	digitalWrite(TFT_BL, HIGH); //GFX_BL high to enable display backlight LED, or leave BL pin from display unconnected as it floats high.
+#endif
 
 	tft.begin();
 	tft.setRotation(0);
