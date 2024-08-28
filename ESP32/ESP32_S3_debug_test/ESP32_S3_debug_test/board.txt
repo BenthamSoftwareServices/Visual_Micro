@@ -1,2 +1,0 @@
-# ESP32_S3_debug_test build property overrides
-#
